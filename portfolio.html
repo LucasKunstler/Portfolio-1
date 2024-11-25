@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Kunstler Lucas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/styles1.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="#">Kunstler Lucas</a></div>
+        <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle-btn" id="theme-toggle">🌙</button>
+    </nav>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>En apprentissage dans le Developpement Web et passionné par le Code</h1>
+            <p>Création d'applications web, Création de site web</p>
+            <a href="#projects" class="cta-btn">Mes projets</a>
+        </div>
+        <canvas id="heroCanvas"></canvas>
+    </section>
+
+<section id="about" class="section">
+    <div class="container about-container">
+        <div class="about-text">
+            <h2>À propos de moi</h2>
+            <em>
+            <p>
+                Je m'appelle Kunstler Lucas, j'ai actuellement 22 ans,
+                je me spécialise actuellement de le domaine du développement Web et Web Mobile. 
+                Avec une connaissance des languages de base comme (HTML, CSS, JavaScript, PHP) 
+            </p>
+            </em>
+        </div>
+        <div class="about-photo">
+            <img src="https://picsum.photos/800/600" alt="Ma photo" class="photo">
+        </div>
+    </div>
+</section>
+
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <!-- <img src="project1.jpg" alt="Projet 1"> -->
+                    <h3>Mon Premeir site Web </h3>
+                    <p>HTML, CSS</p>
+                    <a href="https://lucaskunstler.github.io/Mon-premier-site-web" class="project-link" target="_blank">Voir sur GitHub</a>
+                </div>
+                <div class="project-card">
+                    <!-- <img src="project2.jpg" alt="Projet 2"> -->
+                    <h3>Site de Daltonisme</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                    <a href="https://LucasKunstler.github.io/Dalto_V6/index-FR.html" class="project-link" target="_blank">Voir sur GitHub</a>
+                </div>
+                <!-- <div class="project-card"> -->
+                    <!-- <img src="project3.jpg" alt="Projet 3"> -->
+                    <!-- <h3>Premier FrameWork</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                    <a href="https://LucasKunstler.github.io/Mon-Premier-Framework" class="project-link" target="_blank">Voir sur GitHub</a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section dark-section">
+        <div class="container">
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3>HTML</h3>
+                    <div class="progress-bar" style="width: 90%"></div>
+                </div>
+                <div class="skill">
+                    <h3>CSS</h3>
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar" style="width: 50%"></div>
+                </div>
+                <div class="skill">
+                    <h3>Python</h3>
+                    <div class="progress-bar" style="width: 50%"></div>
+                </div>
+                <div class="skill">
+                    <h3>Mon CV</h3>
+                    <div>
+                        <a href="./CV/Kunstler Lucas.pdf"
+                            download="Kunstler Lucas.pdf">Télécharger le CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2 style="position: center;text-align: center;">Contactez-moi</h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <h3>Mes Coordonnées</h3>
+                <p>Email: <a href="mailto:lucas.kunstler@gmail.com">lucas.kunstler@gmail.com</a></p>
+                <p>Téléphone: <a href="tel:+33 6 06 61 25 81">+33 6 06 61 25 81</a></p>
+                <p>Adresse: <a href="https://maps.app.goo.gl/bkXd243831uPHbTVA">56 quai de l'ill, 67600 Selestat</a></p>
+            </div>
+            <div class="social-media">
+                <h3>Réseaux Sociaux</h3>
+                <ul>
+                     <li><a href="https://github.com/LucasKunstler" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Lucas Kunstler | Developpeur Web</p>
+        </div>
+    </footer>
+
+    <script src="./JS/script1.js"></script>
+</body>
+</html>
