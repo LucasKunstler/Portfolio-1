@@ -16,7 +16,7 @@ body {
     background-color: #121212;
     color: #ddd;
     overflow-x: hidden;
-}
+} 
 
 a {
     text-decoration: none;
@@ -79,7 +79,7 @@ h2 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, rgba(0, 150, 255, 0.1), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(0, 150, 255, 0.1), rgba(0, 0, 0, 0.5)), url('../image/hero.jpg') no-repeat center center/cover;
 }
 
 .hero-content h1 {
