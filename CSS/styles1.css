@@ -34,21 +34,6 @@ h2 {
     margin: 0 auto;
 }
 
-/* Navbar */
-/* .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 30px;
-    background-color: #1a1a1a;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-} */
-
 .navbar .logo {
     font-size: 1.8em;
     font-weight: 700;
@@ -63,14 +48,14 @@ h2 {
     background-color: #1a1a1a;
     color: white;
     display: flex;
-    justify-content: flex-start; /* Alignement à gauche */
+    justify-content: flex-start; 
     align-items: center;
-    z-index: 1000;
+    
 }
 
-/* Burger Menu Style */
+/* Menu burger */
 .burger-menu {
-    display: none; /* Caché par défaut */
+    display: none; /* De base caché */
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
@@ -104,26 +89,26 @@ h2 {
     gap: 30px;
     list-style: none;
     position: absolute;
-    top: 50px; /* En dessous de la navbar */
-    left: 30px; /* Aligner à gauche par rapport au burger */
+    top: 50px; /* Mettre en dessous de la nav */
+    left: 30px; /* Aligner le menu burger */
     flex-direction: column;
     background-color: #1a1a1a;
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transform: scale(0); /* Initialement caché */
+    transform: scale(0); /* Pour caché la nav*/
     transform-origin: top left;
     transition: transform 0.3s ease;
     
 }
 
-/* Afficher le menu lorsqu'il est actif */
+/* Pour afficher le menu */
 .nav-links.active {
-    transform: scale(1); /* Déploie le menu */
+    transform: scale(1); 
     opacity: 1;
 }
 
-/* Style des liens */
+
 .nav-links li a {
     font-size: 1.2em;
     color: white;
@@ -251,7 +236,7 @@ h2 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Grille à 3 colonnes */
+    grid-template-columns: repeat(3, 1fr); /* Grille qui se limite à 3 */
     gap: 30px;
 }
 
@@ -389,9 +374,9 @@ h2 {
 }
 
 ul li a i {
-    margin-right: 8px; /* Espacement entre l'icône et le texte */
-    font-size: 20px;   /* Taille de l'icône */
-    color: #00bcd4;       /* Couleur des icônes */
+    margin-right: 8px; 
+    font-size: 20px;   
+    color: #00bcd4;      
 }
 
 
@@ -465,7 +450,7 @@ footer {
     }
 }
 
-/* Petits téléphones (max-width: 480px) */
+
 @media (max-width: 480px) {
     .navbar {
         padding: 10px 20px;
@@ -489,12 +474,12 @@ footer {
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Une colonne */
-        gap: 20px; /* Réduit l'espacement entre les projets */
+        grid-template-columns: 1fr; 
+        gap: 20px; 
     }
 }   
 
-/* Tablettes (max-width: 768px) */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
@@ -504,20 +489,20 @@ footer {
     }
 
     .burger-menu {
-        display: flex; /* Afficher le menu burger */
+        display: flex; 
         margin-right: 20px;
     }
 
     .nav-links {
-        display: none; /* Cacher le menu par défaut */
+        display: none; 
     }
 
     .nav-links.active {
-        display: flex; /* Afficher en mode actif */
+        display: flex; 
     }
 
     .logo {
-        margin-left: auto; /* Pousse le logo à droite du menu burger */
+        margin-left: auto; 
     }
 
     .hero-content h1 {
@@ -530,7 +515,7 @@ footer {
 
     .project-card img {
         height: auto;
-        width: 100%; /* Réduit la hauteur de l'image pour les petits écrans */
+        width: 100%; 
     }
 
     .about-container {
@@ -560,25 +545,25 @@ footer {
 
 @media (min-width: 769px){
     .nav-links {
-        display: flex; /* Toujours visible sur grands écrans */
-        position: static; /* Position normale */
-        flex-direction: row; /* Aligner les liens horizontalement */
+        display: flex; 
+        position: static; 
+        flex-direction: row; 
         gap: 30px;
-        background-color: transparent; /* Pas de fond */
+        background-color: transparent; 
         padding: 0;
         box-shadow: none;
         transform: none;
         opacity: 1;
-        margin-left: auto; /* Aligne le menu à droite */
+        margin-left: auto; 
     }
 
     .burger-menu {
-        display: none; /* Cacher l'icône burger */
+        display: none; 
     }
 
 }
 
-/* Petits ordinateurs (max-width: 1024px) */
+
 @media (max-width: 1024px) {
     .hero-content h1 {
         font-size: 3.2em;
@@ -597,7 +582,7 @@ footer {
     }
 }
 
-/* Grands écrans (max-width: 1440px) */
+
 @media (max-width: 1440px) {
 
     .container {
@@ -613,7 +598,7 @@ footer {
     }
 }
 
-/* Ultra larges écrans (min-width: 1441px) */
+
 @media (min-width: 1441px) {
 
     .container {
@@ -624,6 +609,6 @@ footer {
         font-size: 5em;
     }
 
-   
+
 }
 
