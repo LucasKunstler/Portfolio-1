@@ -35,7 +35,7 @@ h2 {
 }
 
 /* Navbar */
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -47,27 +47,92 @@ h2 {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-}
+} */
 
 .navbar .logo {
     font-size: 1.8em;
     font-weight: 700;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: flex-start; /* Alignement à gauche */
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Burger Menu Style */
+.burger-menu {
+    display: none; /* Caché par défaut */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+    position: relative;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Transition pour l'icône burger */
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menu déroulant */
 .nav-links {
-    list-style: none;
     display: flex;
     gap: 30px;
+    list-style: none;
+    position: absolute;
+    top: 50px; /* En dessous de la navbar */
+    left: 30px; /* Aligner à gauche par rapport au burger */
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(0); /* Initialement caché */
+    transform-origin: top left;
+    transition: transform 0.3s ease;
     
 }
 
-.nav-links a {
-    font-size: 1.1em;
+/* Afficher le menu lorsqu'il est actif */
+.nav-links.active {
+    transform: scale(1); /* Déploie le menu */
+    opacity: 1;
+}
+
+/* Style des liens */
+.nav-links li a {
+    font-size: 1.2em;
     color: white;
+    padding: 10px 0;
+    text-align: center;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     color: #00bcd4;
 }
 
@@ -186,7 +251,7 @@ h2 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Grille à 3 colonnes */
     gap: 30px;
 }
 
@@ -200,7 +265,7 @@ h2 {
 .project-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .project-card h3 {
@@ -364,18 +429,200 @@ footer {
 }
 
 /* Responsive for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 320px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+/* Petits téléphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
     .about-container {
         flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-photo .photo {
+        max-width: 300px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Une colonne */
+        gap: 20px; /* Réduit l'espacement entre les projets */
+    }
+}   
+
+/* Tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .burger-menu {
+        display: flex; /* Afficher le menu burger */
+        margin-right: 20px;
+    }
+
+    .nav-links {
+        display: none; /* Cacher le menu par défaut */
+    }
+
+    .nav-links.active {
+        display: flex; /* Afficher en mode actif */
+    }
+
+    .logo {
+        margin-left: auto; /* Pousse le logo à droite du menu burger */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .project-card img {
+        height: 150px; /* Réduit la hauteur de l'image pour les petits écrans */
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
         text-align: center;
     }
 
-    .about-photo {
+    .skills-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .skill {
+        width: 80%;
+    }
+
+    .contact-info{
+        flex-direction: column;
+    }
+
+    .social-media{
         margin-top: 30px;
     }
 
-    .contact-info {
-        flex-direction: column;
+}
+
+@media (min-width: 769px){
+    .nav-links {
+        display: flex; /* Toujours visible sur grands écrans */
+        position: static; /* Position normale */
+        flex-direction: row; /* Aligner les liens horizontalement */
+        gap: 30px;
+        background-color: transparent; /* Pas de fond */
+        padding: 0;
+        box-shadow: none;
+        transform: none;
+        opacity: 1;
+        margin-left: auto; /* Aligne le menu à droite */
     }
+
+    .burger-menu {
+        display: none; /* Cacher l'icône burger */
+    }
+
+}
+
+/* Petits ordinateurs (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3.2em;
+    }
+
+    .hero-content p {
+        font-size: 1.4em;
+    }
+
+    .about-photo .photo {
+        max-width: 450px;
+    }
+
+    .skills-grid {
+        gap: 20px;
+    }
+}
+
+/* Grands écrans (max-width: 1440px) */
+@media (max-width: 1440px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 4em;
+    }
+
+    .skills-grid {
+        gap: 25px;
+    }
+}
+
+/* Ultra larges écrans (min-width: 1441px) */
+@media (min-width: 1441px) {
+
+    .container {
+        width: 70%;
+    }
+
+    .hero-content h1 {
+        font-size: 5em;
+    }
+
+   
 }
 

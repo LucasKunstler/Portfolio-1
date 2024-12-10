@@ -24,3 +24,16 @@ function drawParticles() {
 }
 
 drawParticles();
+
+
+// Sélectionner les éléments
+// Sélectionner les éléments
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+// Ajouter un événement clic
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active'); // Animer l'icône burger
+    navLinks.classList.toggle('active');  // Montrer ou cacher le menu
+});
+
