@@ -1,12 +1,12 @@
 // script.js
 
 // Effet Dark/Light Mode
-document.getElementById("theme-toggle").addEventListener("click", function() {
-    const currentTheme = document.body.classList.contains("dark-theme") ? "light" : "dark";
-    document.body.classList.toggle("dark-theme");
-    document.body.classList.toggle("light-theme");
-    this.textContent = currentTheme === "dark" ? "🌙" : "☀️";
-});
+// document.getElementById("theme-toggle").addEventListener("click", function() {
+//     const currentTheme = document.body.classList.contains("dark-theme") ? "light" : "dark";
+//     document.body.classList.toggle("dark-theme");
+//     document.body.classList.toggle("light-theme");
+//     this.textContent = currentTheme === "dark" ? "🌙" : "☀️";
+// });
 
 // Animation du Canvas pour un effet visuel dynamique
 const canvas = document.getElementById("heroCanvas");
