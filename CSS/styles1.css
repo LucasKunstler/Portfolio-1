@@ -529,7 +529,8 @@ footer {
     }
 
     .project-card img {
-        height: 150px; /* Réduit la hauteur de l'image pour les petits écrans */
+        height: auto;
+        width: 100%; /* Réduit la hauteur de l'image pour les petits écrans */
     }
 
     .about-container {
